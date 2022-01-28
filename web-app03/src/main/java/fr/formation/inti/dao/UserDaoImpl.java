@@ -14,12 +14,4 @@ public class UserDaoImpl extends GenericDaoImpl<User, Integer>{
 		
 		return query.getSingleResult();
 	}
-
-	public static void main(String[] args) {
-		UserDaoImpl dao = new UserDaoImpl();
-		dao.beginTransaction();
-		dao.findByLoginAndPassword("test", "test");
-		dao.commitTransaction();
-		dao.close();
-	}
 }

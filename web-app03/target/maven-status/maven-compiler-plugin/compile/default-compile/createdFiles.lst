@@ -9,3 +9,4 @@ fr\formation\inti\entity\User.class
 fr\formation\inti\filter\FilterConnection.class
 fr\formation\inti\controller\LoginServlet.class
 fr\formation\inti\dao\UserDaoImpl.class
+fr\formation\inti\jstl\JSTLServlet.class

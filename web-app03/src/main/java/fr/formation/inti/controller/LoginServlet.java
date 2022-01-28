@@ -21,14 +21,12 @@ import fr.formation.inti.service.UserService;
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private UserService service;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
 	public LoginServlet() {
 		super();
-		service = new UserService();
 	}
 
 	/**
@@ -37,6 +35,7 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.sendRedirect("login.jsp");
 	}
 
 	/**
@@ -45,6 +44,7 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		UserService service = new UserService();
 		String login = request.getParameter("login");
 		String password = request.getParameter("password");
 		HttpSession session = request.getSession();
